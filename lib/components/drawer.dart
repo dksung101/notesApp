@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:mitchkoko_notes/components/drawer_tile.dart";
 import "package:mitchkoko_notes/pages/settings.dart";
+import "package:mitchkoko_notes/pages/weather_page.dart";
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -17,13 +18,23 @@ class MyDrawer extends StatelessWidget {
                 leading: Icon(Icons.home),
                 onTap: () => Navigator.pop(context)),
             DrawerTile(
-                title: "Settings",
-                leading: Icon(Icons.settings),
-                onTap: () {
-                  Navigator.pop(context);
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SettingsPage()));
-                }),
+              title: "Weather",
+              leading: Icon(Icons.sunny_snowing),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => WeatherPage()));
+              },
+            ),
+            DrawerTile(
+              title: "Settings",
+              leading: Icon(Icons.settings),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SettingsPage()));
+              },
+            ),
           ],
         ));
   }

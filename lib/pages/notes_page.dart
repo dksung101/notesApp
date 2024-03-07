@@ -27,7 +27,16 @@ class NotesPageState extends State<NotesPage> {
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
-              content: TextField(controller: textController),
+              content: TextField(
+                  controller: textController,
+                  cursorColor: Theme.of(context).colorScheme.inversePrimary,
+                  decoration: InputDecoration(
+                    hintText: "Enter your note",
+                    focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                            color:
+                                Theme.of(context).colorScheme.inversePrimary)),
+                  )),
               actions: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,6 +44,7 @@ class NotesPageState extends State<NotesPage> {
                     MaterialButton(
                       onPressed: () {
                         Navigator.pop(context);
+                        textController.clear();
                       },
                       child: Text("Back"),
                     ),
@@ -132,7 +142,7 @@ class NotesPageState extends State<NotesPage> {
                   itemBuilder: (context, index) {
                     final note = currentNotes[index];
                     return NoteTile(
-                        title: index.toString() + '. ' + note.text,
+                        title: (index + 1).toString() + '. ' + note.text,
                         onEditPressed: () => updateNote(note),
                         onDeletePressed: () => deleteNote(note.id));
                   }),

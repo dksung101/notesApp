@@ -9,9 +9,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  geocoding: ^2.2.0
+  geolocator: ^11.0.0
   google_fonts: 6.1.0
+  http: ^1.1.0
   isar: ^3.1.0+1
   isar_flutter_libs: ^3.1.0+1
+  lottie: ^2.7.0
   path_provider: ^2.1.2
   provider: ^6.1.2
 
@@ -24,3 +28,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+  fonts:
+    - family: Rouna
+      fonts:
+        - asset: fonts/Rouna-Bold.otf
