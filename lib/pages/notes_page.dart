@@ -29,6 +29,9 @@ class NotesPageState extends State<NotesPage> {
         builder: (context) => AlertDialog(
               content: TextField(
                   controller: textController,
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                      fontFamily: 'Brockmann'),
                   cursorColor: Theme.of(context).colorScheme.inversePrimary,
                   decoration: InputDecoration(
                     hintText: "Enter your note",
@@ -74,7 +77,19 @@ class NotesPageState extends State<NotesPage> {
         context: context,
         builder: (context) => AlertDialog(
               title: Text("Update Note"),
-              content: TextField(controller: textController),
+              content: TextField(
+                  controller: textController,
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary,
+                      fontFamily: 'Brockmann'),
+                  cursorColor: Theme.of(context).colorScheme.inversePrimary,
+                  decoration: InputDecoration(
+                    hintText: "Update note",
+                    focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(
+                            color:
+                                Theme.of(context).colorScheme.inversePrimary)),
+                  )),
               actions: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -126,14 +141,14 @@ class NotesPageState extends State<NotesPage> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 25.0),
+            Center(
               child: Text(
                 'Notes',
-                style: GoogleFonts.dmSerifText(
-                  fontSize: 48,
-                  color: Theme.of(context).colorScheme.inversePrimary,
-                ),
+                style: TextStyle(
+                    color: Theme.of(context).colorScheme.inversePrimary,
+                    fontFamily: 'Geomanist',
+                    fontSize: 48,
+                    fontWeight: FontWeight.bold),
               ),
             ),
             Expanded(

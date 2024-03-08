@@ -21,7 +21,12 @@ class NoteTile extends StatelessWidget {
         ),
         margin: EdgeInsets.only(top: 10, left: 25, right: 25),
         child: ListTile(
-            title: Text(title),
+            title: Text(
+              title,
+              style: TextStyle(
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                  fontFamily: 'Brockmann'),
+            ),
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
