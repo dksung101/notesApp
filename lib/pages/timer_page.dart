@@ -189,6 +189,7 @@ class _TimerPageState extends State<TimerPage> with TickerProviderStateMixin {
                               borderRadius: BorderRadius.circular(10)),
                           onPressed: () {
                             _controller.restart();
+                            _controller.pause();
                           },
                           child: Text("R E S E T",
                               style: TextStyle(
