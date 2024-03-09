@@ -143,6 +143,7 @@ class _TimerPageState extends State<TimerPage> with TickerProviderStateMixin {
                                   width: 3),
                               borderRadius: BorderRadius.circular(10)),
                           onPressed: () {
+                            HapticFeedback.heavyImpact();
                             _controller.pause();
                           },
                           child: Text("S T O P",
@@ -166,6 +167,7 @@ class _TimerPageState extends State<TimerPage> with TickerProviderStateMixin {
                                     width: 3),
                                 borderRadius: BorderRadius.circular(10)),
                             onPressed: () {
+                              HapticFeedback.heavyImpact();
                               _controller.start();
                             },
                             child: Text("S T A R T",
@@ -188,6 +190,7 @@ class _TimerPageState extends State<TimerPage> with TickerProviderStateMixin {
                                   width: 3),
                               borderRadius: BorderRadius.circular(10)),
                           onPressed: () {
+                            HapticFeedback.heavyImpact();
                             _controller.restart();
                             _controller.pause();
                           },
@@ -216,6 +219,7 @@ class _TimerPageState extends State<TimerPage> with TickerProviderStateMixin {
                     } else {
                       Acompleted = false;
                       _Acontroller.reverse();
+                      HapticFeedback.heavyImpact();
                     }
                   });
                 },
