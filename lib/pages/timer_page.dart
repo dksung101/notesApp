@@ -240,6 +240,7 @@ class _TimerPageState extends State<TimerPage> with TickerProviderStateMixin {
                     } else {
                       Bcompleted = false;
                       _Bcontroller.reverse();
+                      HapticFeedback.heavyImpact();
                     }
                   });
                 },
@@ -260,6 +261,7 @@ class _TimerPageState extends State<TimerPage> with TickerProviderStateMixin {
                     } else {
                       Ccompleted = false;
                       _Ccontroller.reverse();
+                      HapticFeedback.heavyImpact();
                     }
                   });
                 },
@@ -280,6 +282,7 @@ class _TimerPageState extends State<TimerPage> with TickerProviderStateMixin {
                     } else {
                       Dcompleted = false;
                       _Dcontroller.reverse();
+                      HapticFeedback.heavyImpact();
                     }
                   });
                 },
